@@ -110,6 +110,7 @@ else
     echo "✓ $ROOTCA_FILE findes allerede. Gør intet."
 fi
 sudo chmod 0700 ./runtime/mosquitto/certs/psk_file.txt
+sudo chmod 0700 ./runtime/mosquitto/passwd
 
 
 

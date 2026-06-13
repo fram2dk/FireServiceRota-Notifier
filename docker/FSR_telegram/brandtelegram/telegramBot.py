@@ -292,7 +292,7 @@ if os.path.isfile(configfilepath):
   _LOGGER.info('config file found. it had '+str(len(config))+' keys')
   _LOGGER.debug('config content'+str(config_content))
 else:
-  _LOGGER.warn("no config file")
+  _LOGGER.warning("no config file")
 
 tgusersjsonpath = '../tmp/users.json'
 if os.path.isfile(tgusersjsonpath):
@@ -312,7 +312,7 @@ if os.path.isfile(fsrusersjsonpath):
     fsrusers_str = json.load(f) #userid is str in json
   fsrusers = {int(k): v for k, v in fsrusers_str.items()} #key(userid) skal være int
 else:
-  _LOGGER.warn("no FSR users file found")
+  _LOGGER.warning("no FSR users file found")
 
 sqlitefilepath = "../tmp/users.db"
 
