@@ -58,7 +58,7 @@ fi
 if [ ! -f "$CONFIG_FILE" ]; then
     echo "Fandt ikke $CONFIG_FILE. Kopierer eksempelfil..."
     # Kopier eksempelfilen
-    cp "./runtime/mosquitto/example/config.conf" "$CONFIG_FILE"
+    cp "./runtime/mosquitto/example/mosquitto.conf" "$CONFIG_FILE"
     echo "✓ Filen blev kopieret."
 else
     echo "✓ $CONFIG_FILE findes allerede. Gør intet."
