@@ -1,10 +1,13 @@
 /compose.yaml
 /runtime/FSR_listener/config.json
 /runtime/FSR_listener/ssl/*
+!/runtime/FSR_listener/ssl/.gitkeep
 /runtime/FSR_telegram/tmp/*
+!/runtime/FSR_telegram/tmp/.gitkeep
 /runtime/FSR_telegram/data/config.json
 /runtime/FSR_telegram/data/ssl/*
+!/runtime/FSR_telegram/data/ssl/.gitkeep
 /runtime/mosquitto/*
-!/runtime/mosquitto/example/*
+!/runtime/mosquitto/example/
 
 
