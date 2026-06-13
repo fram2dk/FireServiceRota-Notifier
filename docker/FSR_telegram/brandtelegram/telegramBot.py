@@ -316,9 +316,13 @@ else:
 
 sqlitefilepath = "../tmp/users.db"
 
-if tgtoken is not None:
+
+if not 'tgtoken' in globals():
   if "TG_TOKEN" in os.environ:
     tgtoken = os.environ["TG_TOKEN"]
+elif tgtoken is None:
+  if "TG_TOKEN" in os.environ:
+    tgtoken = os.environ["TG_TOKEN"] 
 
 if debugFlag:
   _LOGGER.info('##### DEBUG IS ON #######')
