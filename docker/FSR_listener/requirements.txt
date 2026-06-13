@@ -1,0 +1,7 @@
+requests
+paho-mqtt
+pytz
+oauthlib
+websocket-client
+pyaes
+pycryptodome

@@ -1,0 +1,3420 @@
+[
+    {
+        "id": "16665fd83260f0ee",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "de42c0fffecbe0e1",
+        "type": "tab",
+        "label": "logging",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "539911042c530633",
+        "type": "tab",
+        "label": "Callout",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fd8f2870b92cd2a",
+        "type": "tab",
+        "label": "telegram",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cad77586479f471f",
+        "type": "subflow",
+        "name": "prepare for DB",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 180,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "d1ff8c98f7a0ebd8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1420,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "9548d30a1830741c",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "a588552898ec9a9e",
+        "type": "subflow",
+        "name": "rate limiter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "fb344d4757109c9c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 520,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "fb344d4757109c9c",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 520,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "fb344d4757109c9c",
+                    "port": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": "960a11131036b0ef",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "e935ef35d254b294"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1360,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "a87469f0d0671a4b",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "14e2ea75bed2e292",
+        "type": "group",
+        "z": "de42c0fffecbe0e1",
+        "name": "log incidents",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d85657ed74c966b6",
+            "cdb962cbf48543a1",
+            "c976fcd774f01f1b",
+            "079c9b2bc80e99b2",
+            "ea731399db58f90f",
+            "d2fc390b4b036d09",
+            "40d96cf793841a04",
+            "a52b8e0f2fbc6523",
+            "465c6b592054cb4b",
+            "8ae3d05e1a540410",
+            "d7929eed1967031a"
+        ],
+        "x": 274,
+        "y": 119,
+        "w": 1392,
+        "h": 162
+    },
+    {
+        "id": "2f87d1c2cfc9a92b",
+        "type": "group",
+        "z": "539911042c530633",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d96f2e5735c674b0",
+            "1c0578fd5edc0bac",
+            "2d0ddf2699602447",
+            "3efbc57a11514334",
+            "6a1644a6ab68d5f2",
+            "42586676741764d0",
+            "7a29a51fe8e90268",
+            "39bb60bb4482c6a4",
+            "385b463bb1924a74",
+            "600dd16b0f7950f3",
+            "fdcb11ecbef74212",
+            "39b279c4c18bb95f",
+            "8be48a7983726b58",
+            "2100f75940ae94e4",
+            "47917fcb429ad09f",
+            "df29602187d54d50",
+            "1cc2e5c84511e0ed",
+            "e47f59b7968c1f18",
+            "141217609dbcf9ac",
+            "703d00deb5101065",
+            "8f4522bcb20d467e",
+            "c8cfc68d7b814dd6",
+            "06febe0a3f046fba",
+            "ea5d8ba81e5b10b9",
+            "1ef8da0936d4f8c7",
+            "ab7cd7b236570abf",
+            "79b8b90df4c2f091",
+            "85788e7d1ea53211",
+            "f0509ca1bc1f4e03",
+            "7b35aa57940e91d0",
+            "7475b62d06e5551f",
+            "670d52f911222b98",
+            "e6a363c6cbee38fb",
+            "17173196e050f0e0",
+            "a590bd15d414b84b",
+            "d9c394ba34cb5b48",
+            "45df21ef43145d12",
+            "15f88d08281bc796",
+            "58abc0bbd0bbffb2",
+            "f03bf7669c62ed2c",
+            "a588ae1f47ea902c",
+            "8323bdc41f6b8c3e",
+            "f86248894d920326",
+            "cdb439aebb53bee2",
+            "5b2124f7a4f0924e",
+            "d0872df4d6f5a6c6"
+        ],
+        "x": 74,
+        "y": 79,
+        "w": 2732,
+        "h": 582
+    },
+    {
+        "id": "e5dcfcf6c1b0753a",
+        "type": "group",
+        "z": "16665fd83260f0ee",
+        "name": "Send heartbeat",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "08243063361f4e25",
+            "33670d85732a1d9f",
+            "7aa3cb58e67634a8",
+            "cdd73e2bd07ecd0d",
+            "b6194911cc4b22fc",
+            "d4244d1ca87869e8",
+            "562719711b88a3e7",
+            "778a4d76725f022f",
+            "53d1404e10093db0",
+            "6b98e3ab600ca5a8",
+            "8b5f9977eb4a2aa7"
+        ],
+        "x": 134,
+        "y": 59,
+        "w": 1512,
+        "h": 282
+    },
+    {
+        "id": "5f57b35c5ed0f6bc",
+        "type": "group",
+        "z": "2fd8f2870b92cd2a",
+        "name": "Send heartbeat",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "df9c07a7f9588735",
+            "b895ab7fafe1f24e",
+            "8564567cc0c90af9",
+            "d7be2af1db449eae",
+            "cf3a634e9c3e78b8",
+            "efe196c4a13e4e46",
+            "08ba1b1f8501d913",
+            "35934c04f2e4bc7f",
+            "e4c268c6f93aad33",
+            "5fe0b6fb69ce872e"
+        ],
+        "x": 74,
+        "y": 39,
+        "w": 1172,
+        "h": 182
+    },
+    {
+        "id": "9535783a43a97366",
+        "type": "group",
+        "z": "2fd8f2870b92cd2a",
+        "name": "Get userdata to telegram",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7f2a7d4d6b201c80",
+            "d62b5cbc8e31e2c5",
+            "0758f2da1fca0998",
+            "1c68dab86e1e321d",
+            "3e8e5ff2e094c58f",
+            "5a596f4f74710fd5",
+            "c2a49f57f3930994",
+            "7e73fbdaeb5fa4df",
+            "c7cd1e15ee39be1b",
+            "8ad7e6e9e4a49708"
+        ],
+        "x": 74,
+        "y": 339,
+        "w": 1632,
+        "h": 182
+    },
+    {
+        "id": "0306968a06a8d77c",
+        "type": "group",
+        "z": "2fd8f2870b92cd2a",
+        "name": "save tguser backup and return receipt",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "39f1832d8132fd03",
+            "54f6f4f17eec93c5",
+            "ac9604840a7f13ad",
+            "daa643e0ed16cca5",
+            "9bf1c575858c0155",
+            "03bfecf68cdbfb4b",
+            "5731c3fbd974f730",
+            "4d6c4697f629d687",
+            "1f921ad7257f9ece",
+            "fb046207264fd73f",
+            "9287faf0393b0577",
+            "332cf2a4a4fb0122",
+            "30eb45baba54c223",
+            "3a18765e1cfa71ef",
+            "508ff2fc5c38d922",
+            "6eaddb84251337e6",
+            "3c4f3a6cdd96427e",
+            "bd943901afd2a57b",
+            "c67c01c0da4d0dd7",
+            "794a55ba8ec9211a",
+            "c0e1ea1c55c53227",
+            "7679bfef409dac2c"
+        ],
+        "x": 74,
+        "y": 579,
+        "w": 1612,
+        "h": 282
+    },
+    {
+        "id": "0dc582a0c56ff50e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5ff74d20e9e2fee5",
+        "type": "sqlitedb",
+        "db": ":memory:",
+        "mode": "RWC"
+    },
+    {
+        "id": "17bf0c7328d99c94",
+        "type": "function",
+        "z": "cad77586479f471f",
+        "name": "clean empty",
+        "func": "function cleanStructure(data) {\n    if (Array.isArray(data)) {\n        return data\n            .map(cleanStructure)\n            .filter(item => item !== null && !(Array.isArray(item) && item.length === 0));\n    } else if (typeof data === \"object\" && data !== null) {\n        let cleaned = {};\n        for (let key in data) {\n            let value = cleanStructure(data[key]);\n            if (value !== null && !(Array.isArray(value) && value.length === 0)) {\n                cleaned[key] = value;\n            }\n        }\n        return cleaned;\n    } else {\n        return data;\n    }\n}\n\nmsg.payload = cleanStructure(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "e0f5f066c2d1d9e7"
+            ]
+        ]
+    },
+    {
+        "id": "e0f5f066c2d1d9e7",
+        "type": "function",
+        "z": "cad77586479f471f",
+        "name": "rearrange for bucket",
+        "func": "const dtnow = Date.now();\nconst oldpayload = msg.payload;\nmsg.payload = [];\nif (Array.isArray(oldpayload)) {\n  for (let i = 0; i < oldpayload.length; i++) {\n    let newpayload = {};\n    let item = oldpayload[i];\n    if (\"timestamp\" in item) {\n      newpayload.timestamp = item.timestamp;\n    } else {\n      newpayload.timestamp = dtnow/1000.0;\n    }\n    if (\"incidentid\" in item) {\n      newpayload.incidentid = item.incidentid;\n    }\n    newpayload.payload = oldpayload[i]\n    msg.payload.push(newpayload);\n  }\n} else {\n  let newpayload = {};\n  newpayload.timestamp = dtnow/1000.0;\n  newpayload.payload = oldpayload;\n  msg.payload.push(newpayload);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\ncontext.set(\"latestpingrecieved\", 0);\ncontext.set(\"latestpingsent\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 280,
+        "wires": [
+            [
+                "9548d30a1830741c"
+            ]
+        ]
+    },
+    {
+        "id": "9548d30a1830741c",
+        "type": "function",
+        "z": "cad77586479f471f",
+        "name": "Format til MongoDB",
+        "func": "if (!Array.isArray(msg.payload)) {\n    msg.payload = [msg.payload];\n}\nmsg.payload = [msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1ff8c98f7a0ebd8",
+        "type": "switch",
+        "z": "cad77586479f471f",
+        "name": "kun struer",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "jsonata_exp",
+                "v": "$split(msg.topic, \"/\")[0] = \"struerbrand\"",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "17bf0c7328d99c94"
+            ]
+        ]
+    },
+    {
+        "id": "811acc354944fcb2",
+        "type": "function",
+        "z": "a588552898ec9a9e",
+        "name": "FMO ratelimit",
+        "func": "const cooldown = env.get(\"delay\") || 5000;\nlet lastSent = context.get(\"lastSent\") || 0;\nlet queuedMsg = context.get(\"queuedMsg\") || null;\nlet now = Date.now();\n\nif (now - lastSent > cooldown) {\n    // Send med det samme\n    context.set(\"lastSent\", now);\n    return [msg, { \"payload\": \"nodelay \" + cooldown + \" ms.\"}];\n} else {\n    // Gem besked til senere\n    context.set(\"queuedMsg\", msg);\n\n    // Hvis der ikke allerede er en timer, start en\n    if (!context.get(\"timerActive\")) {\n        context.set(\"timerActive\", true);\n\n        setTimeout(() => {\n            let latest = context.get(\"queuedMsg\");\n            context.set(\"queuedMsg\", null);\n            context.set(\"lastSent\", Date.now());\n            context.set(\"timerActive\", false);\n            node.send([latest, { \"payload\": \"passed \" + cooldown + \" ms.\"}]);\n        }, cooldown);\n    }\n\n    return [null, { \"payload\": \"delayed \" + cooldown + \" ms.\" }]; // Hold beskeden tilbage\n}",
+        "outputs": 2,
+        "timeout": "5",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fb344d4757109c9c",
+        "type": "function",
+        "z": "a588552898ec9a9e",
+        "name": "per topic",
+        "func": "const cooldown = env.get(\"delay\") || 5000; // delay i ms, kan sættes via env-var\nconst topic = msg.topic || \"_default\"; // fallback hvis topic mangler\n\nlet state = context.get(\"state\") || {};\nlet now = Date.now();\n\nif (!state[topic]) {\n    state[topic] = {\n        lastSent: 0,\n        queuedMsg: null,\n        timerActive: false\n    };\n}\n\nlet topicState = state[topic];\n\nif (now - topicState.lastSent > cooldown) {\n    // Send med det samme\n    topicState.lastSent = now;\n    context.set(\"state\", state);\n    return [msg, { \"payload\": \"nodelay \" + cooldown + \" ms.\" }];\n} else {\n    // Gem seneste besked\n    topicState.queuedMsg = msg;\n\n    if (!topicState.timerActive) {\n        topicState.timerActive = true;\n\n        setTimeout(() => {\n            let latest = topicState.queuedMsg;\n            topicState.queuedMsg = null;\n            topicState.lastSent = Date.now();\n            topicState.timerActive = false;\n            context.set(\"state\", state);\n            node.send([latest, { \"payload\": \"passed \" + cooldown + \" ms.\" }]);\n        }, cooldown);\n    }\n\n    context.set(\"state\", state);\n    return [null, { \"payload\": \"delayed \" + cooldown + \" ms.\" }];\n}\n",
+        "outputs": 2,
+        "timeout": "5",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e935ef35d254b294",
+        "type": "function",
+        "z": "960a11131036b0ef",
+        "name": "Build SELECT query",
+        "func": "msg.headers = {\n  \"Authorization\": \"Basic \" + Buffer.from(\"root:root\").toString(\"base64\"),\n  \"Content-Type\": \"application/json\"\n};\n\nconst baseQuery = \"USE NS app DB main;\";\nlet dynamicQueries = [];\n\n// Hjælpefunktion til at sikre, at en streng slutter med semikolon\nfunction ensureSemicolon(queryString) {\n    let trimmed = queryString.trim();\n    if (trimmed.length === 0) return \"\";\n    // Hvis den ikke slutter med ;, så tilføj det\n    return trimmed.endsWith(\";\") ? trimmed : trimmed + \";\";\n}\n\n// 2. Håndter msg.query (String, Array eller ingenting)\nif (typeof msg.query === \"string\") {\n    dynamicQueries.push(ensureSemicolon(msg.query));\n} else if (Array.isArray(msg.query)) {\n    // Kør igennem alle elementer i arrayet og giv dem et semikolon hvis de mangler\n    msg.query.forEach(q => {\n        if (typeof q === \"string\" && q.trim().length > 0) {\n            dynamicQueries.push(ensureSemicolon(q));\n        }\n    });\n}\n\n// 3. Saml det hele med linjeskift\nmsg.payload = `${baseQuery}\\n${dynamicQueries.join(\"\\n\")}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "46cb6504502373d4"
+            ]
+        ]
+    },
+    {
+        "id": "46cb6504502373d4",
+        "type": "http request",
+        "z": "960a11131036b0ef",
+        "name": "POST → SurrealDB",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://surrealdb:8000/sql",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "a87469f0d0671a4b"
+            ]
+        ]
+    },
+    {
+        "id": "a87469f0d0671a4b",
+        "type": "function",
+        "z": "960a11131036b0ef",
+        "name": "Build SELECT query",
+        "func": "\nif (Array.isArray(msg.payload)) {\n    if (msg.payload.length== 2) {\n        if (msg.payload[1].status == \"OK\") {\n            msg.output = msg.payload[1].result;\n        }\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08243063361f4e25",
+        "type": "mqtt out",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "send to screen",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1540,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "33670d85732a1d9f",
+        "type": "change",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "set mqtt params",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "returntopic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "qos",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"listening\":msg.station & \"/fromFSR/incidents/#\",\"sending\":msg.station & \"/activeIncidents\"} \t/*{\"listening\":payload,\"sending\":payload}*/",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1260,
+        "y": 180,
+        "wires": [
+            [
+                "08243063361f4e25"
+            ]
+        ]
+    },
+    {
+        "id": "7aa3cb58e67634a8",
+        "type": "mqtt in",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "topic": "+/fromScreen/instance/+/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "cdd73e2bd07ecd0d"
+            ]
+        ]
+    },
+    {
+        "id": "b6194911cc4b22fc",
+        "type": "delay",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "78",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1020,
+        "y": 180,
+        "wires": [
+            [
+                "33670d85732a1d9f"
+            ]
+        ]
+    },
+    {
+        "id": "cdd73e2bd07ecd0d",
+        "type": "change",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "returntopic",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0] & \"/toScreen/\" & $split(msg.topic, '/')[3] & \"/state\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "station",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "instance",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[3]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "778a4d76725f022f",
+                "562719711b88a3e7",
+                "6b98e3ab600ca5a8",
+                "8b5f9977eb4a2aa7"
+            ]
+        ]
+    },
+    {
+        "id": "d4244d1ca87869e8",
+        "type": "delay",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "778a4d76725f022f"
+            ]
+        ]
+    },
+    {
+        "id": "562719711b88a3e7",
+        "type": "trigger",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "op1": "",
+        "op2": "true",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "2",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "53d1404e10093db0"
+            ]
+        ]
+    },
+    {
+        "id": "778a4d76725f022f",
+        "type": "trigger",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "pay",
+        "duration": "70",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "b6194911cc4b22fc"
+            ],
+            [
+                "d4244d1ca87869e8"
+            ]
+        ]
+    },
+    {
+        "id": "53d1404e10093db0",
+        "type": "change",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "778a4d76725f022f",
+                "6b98e3ab600ca5a8"
+            ]
+        ]
+    },
+    {
+        "id": "6b98e3ab600ca5a8",
+        "type": "function",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "save screen instance",
+        "func": "const oldscreens = flow.get(\"screens\");\nlet newscreens = oldscreens;\nnewscreens[msg.instance] = msg.station; \n\nif (msg.reset) {\n    delete newscreens[msg.instance]\n}\n\n\nflow.set(\"screens\", newscreens);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"screens\", {});",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b9ea483d3972569",
+        "type": "inject",
+        "z": "16665fd83260f0ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "struerbrand/fromScreen/instance/5F8BV7va/asdf",
+        "payload": "{\"timestamp\":1780903346.649975,\"instance\":\"5F8BV7va\",\"message\":\"alive and well\",\"swversion\":\"220526a\",\"listening\":[\"struerbrand/activeIncidents\"]}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "95f72ee68e6781f6"
+            ]
+        ]
+    },
+    {
+        "id": "95f72ee68e6781f6",
+        "type": "mqtt out",
+        "z": "16665fd83260f0ee",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 590,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8b5f9977eb4a2aa7",
+        "type": "debug",
+        "z": "16665fd83260f0ee",
+        "g": "e5dcfcf6c1b0753a",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6c1d9c54e6e09e1d",
+        "type": "inject",
+        "z": "16665fd83260f0ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "struerbrand/fromScreen/instance/5F8BV7va/",
+        "payload": "{\"timestamp\":1780903346.649975,\"instance\":\"5F8BV7va\",\"message\":\"alive and well\",\"swversion\":\"220526a\",\"listening\":[\"struerbrand/activeIncidents\"]}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "95f72ee68e6781f6"
+            ]
+        ]
+    },
+    {
+        "id": "f34654790583c693",
+        "type": "inject",
+        "z": "16665fd83260f0ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "struerbrand/fromScreen/instance/1347va",
+        "payload": "{\"timestamp\":1780903346.649975,\"instance\":\"5F8BV7va\",\"message\":\"alive and well\",\"swversion\":\"220526a\",\"listening\":[\"struerbrand/activeIncidents\"]}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 700,
+        "wires": [
+            [
+                "95f72ee68e6781f6"
+            ]
+        ]
+    },
+    {
+        "id": "d85657ed74c966b6",
+        "type": "mqtt in",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "Incidents",
+        "topic": "+/fromFSR/incidents/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "cdb962cbf48543a1"
+            ]
+        ]
+    },
+    {
+        "id": "cdb962cbf48543a1",
+        "type": "function",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "clean empty",
+        "func": "function cleanStructure(data) {\n    if (Array.isArray(data)) {\n        return data\n            .map(cleanStructure)\n            .filter(item => item !== null && !(Array.isArray(item) && item.length === 0));\n    } else if (typeof data === \"object\" && data !== null) {\n        let cleaned = {};\n        for (let key in data) {\n            let value = cleanStructure(data[key]);\n            if (value !== null && !(Array.isArray(value) && value.length === 0)) {\n                cleaned[key] = value;\n            }\n        }\n        return cleaned;\n    } else {\n        return data;\n    }\n}\n\nmsg.payload = cleanStructure(msg.payload);\nif (msg.topic.split('/')[0] != 'brandebug') {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [
+                "40d96cf793841a04"
+            ]
+        ]
+    },
+    {
+        "id": "c976fcd774f01f1b",
+        "type": "change",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "\"fsrincidentmsg/raw/\" & msg.station & \"_\" & $fromMillis($millis())",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 240,
+        "wires": [
+            [
+                "079c9b2bc80e99b2"
+            ]
+        ]
+    },
+    {
+        "id": "079c9b2bc80e99b2",
+        "type": "json",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1290,
+        "y": 240,
+        "wires": [
+            [
+                "ea731399db58f90f"
+            ]
+        ]
+    },
+    {
+        "id": "40d96cf793841a04",
+        "type": "change",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "station",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 160,
+        "wires": [
+            [
+                "a52b8e0f2fbc6523"
+            ]
+        ]
+    },
+    {
+        "id": "a52b8e0f2fbc6523",
+        "type": "split",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 970,
+        "y": 160,
+        "wires": [
+            [
+                "8ae3d05e1a540410"
+            ]
+        ]
+    },
+    {
+        "id": "465c6b592054cb4b",
+        "type": "join",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "mode": "auto",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "60",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 890,
+        "y": 240,
+        "wires": [
+            [
+                "c976fcd774f01f1b"
+            ]
+        ]
+    },
+    {
+        "id": "8ae3d05e1a540410",
+        "type": "change",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parts",
+                "pt": "msg",
+                "to": "{\"id\":station}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "d7929eed1967031a"
+            ]
+        ]
+    },
+    {
+        "id": "d7929eed1967031a",
+        "type": "batch",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "",
+        "mode": "interval",
+        "count": 10,
+        "overlap": 0,
+        "interval": "3600",
+        "allowEmptySequence": false,
+        "honourParts": false,
+        "topics": [],
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "465c6b592054cb4b"
+            ]
+        ]
+    },
+    {
+        "id": "ea731399db58f90f",
+        "type": "encrypt",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "name": "krypter",
+        "algorithm": "AES",
+        "key": "8Yf?fkAP3s",
+        "x": 1430,
+        "y": 240,
+        "wires": [
+            [
+                "d2fc390b4b036d09"
+            ]
+        ]
+    },
+    {
+        "id": "d2fc390b4b036d09",
+        "type": "amazon s3 out",
+        "z": "de42c0fffecbe0e1",
+        "g": "14e2ea75bed2e292",
+        "aws": "",
+        "bucket": "fsr",
+        "filename": "",
+        "localFilename": "",
+        "region": "eu-north-1",
+        "name": "",
+        "x": 1590,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d96f2e5735c674b0",
+        "type": "exec",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "command": "python3",
+        "addpay": "command",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "basic decode",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "703d00deb5101065"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1c0578fd5edc0bac",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "convert to command",
+        "func": "let cmdpayload = JSON.stringify(msg.incidentpayload);\nif (typeof cmdpayload !== \"undefined\") {\n    msg.command = \"/data/python/decodeMes.py '\" + cmdpayload + \"'\";\n    return [msg,null];\n} else {\n    msg.debug = \"unable to JSON strigify msg.incidentpayload\"\n    return [null,msg];\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 200,
+        "wires": [
+            [
+                "d96f2e5735c674b0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2d0ddf2699602447",
+        "type": "split",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "kun en incident ad gangen",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "3efbc57a11514334"
+            ]
+        ]
+    },
+    {
+        "id": "3efbc57a11514334",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "kun incident payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "incidentpayload",
+                "pt": "msg",
+                "to": "payload.payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "payload.timestamp",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "incidentSource",
+                "pt": "msg",
+                "to": "payload.source",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 200,
+        "wires": [
+            [
+                "1c0578fd5edc0bac"
+            ]
+        ]
+    },
+    {
+        "id": "6a1644a6ab68d5f2",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "tjek json str",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "json",
+                "vt": "json"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "42586676741764d0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "42586676741764d0",
+        "type": "json",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 910,
+        "y": 280,
+        "wires": [
+            [
+                "ea5d8ba81e5b10b9"
+            ]
+        ]
+    },
+    {
+        "id": "7a29a51fe8e90268",
+        "type": "mqtt out",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "send to screen",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 2420,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "39bb60bb4482c6a4",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "prepare for screen",
+        "func": "const oldpayload = msg.payload;\nlet msgout = {};\nmsgout.payload = [];\nmsgout.topic = msg.station + '/activeIncidents'\n\nif (oldpayload.length > 0) {\n    for (let i = 0; i < oldpayload.length; i++) {\n        let item = oldpayload[i];\n        msgout.payload.push(item);\n    }\n\n    return msgout;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 180,
+        "wires": [
+            [
+                "670d52f911222b98"
+            ]
+        ]
+    },
+    {
+        "id": "39b279c4c18bb95f",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params",
+                "pt": "msg",
+                "to": "{\"$incidentid\":msg.payload.id,\"$payload\":$string(msg.payload)}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 120,
+        "wires": [
+            [
+                "600dd16b0f7950f3"
+            ]
+        ]
+    },
+    {
+        "id": "8be48a7983726b58",
+        "type": "delay",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1800,
+        "y": 120,
+        "wires": [
+            [
+                "fdcb11ecbef74212"
+            ]
+        ]
+    },
+    {
+        "id": "2100f75940ae94e4",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "split personer",
+        "func": "const newtopic = msg.station + \"/toTelegram/userupdate\"\nlet msgout = {\"topic\":msg.topic,\"kort_melding\":\"\",\"responses\":[]};\nif (\"kort_melding\" in msg) {\n    msgout.kort_melding = msg.kort_melding\n}\n\nconst oldpayload = msg.payload;\nif (\"incidentpayload\" in msg) {\n    const oldincdpayload = msg.incidentpayload;\n    if (\"incident_responses\" in oldincdpayload) {\n        const responses = oldincdpayload[\"incident_responses\"]\n        if (Array.isArray(responses)) {\n            for (let i = 0; i < responses.length; i++) {\n                const response = responses[i];\n                let responseout = { \"userdata\": { \"id\":response.user_id,'name':response.user_name},\"status\":response.status};\n                node.send({ \"topic\": newtopic + \"/\" + msg.payload.id + \"/\" + response.user_id, \"payload\": { \"ts\": msg.timestamp, \"incidentid\": msg.payload.id,\"kort_melding\": msgout.kort_melding, \"userdata\": { \"id\": response.user_id, 'name': response.user_name }, \"status\": response.status }});\n                msgout.responses.push(responseout);\n            }\n        }   \n    }\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 480,
+        "wires": [
+            [
+                "df29602187d54d50"
+            ]
+        ]
+    },
+    {
+        "id": "47917fcb429ad09f",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "tjek alder på incident",
+        "property": "payload.starttime",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "$round($millis()/1000 - 3600, 0)",
+                "vt": "jsonata"
+            },
+            {
+                "t": "lt",
+                "v": "$round($millis()/1000 - 3600, 0)",
+                "vt": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1440,
+        "y": 460,
+        "wires": [
+            [
+                "7b35aa57940e91d0"
+            ],
+            [],
+            [
+                "85788e7d1ea53211"
+            ]
+        ],
+        "outputLabels": [
+            "under 1t",
+            "over 1t",
+            "ukendt"
+        ]
+    },
+    {
+        "id": "df29602187d54d50",
+        "type": "rbe",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.status",
+        "topi": "topic",
+        "x": 2230,
+        "y": 480,
+        "wires": [
+            [
+                "141217609dbcf9ac"
+            ]
+        ]
+    },
+    {
+        "id": "1cc2e5c84511e0ed",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "til brandmænd",
+        "func": "const newtopic = msg.station + \"/toTelegram/incidentupdate\"\nlet msgout = { \"topic\": newtopic, \"payload\": {\"ts\":msg.timestamp,\"incidentid\": msg.payload.id, \"starttime\": msg.payload.starttime, \"melding\": msg.payload.melding, \"kort_melding\": msg.kort_melding,\"crew\":msg.payload.crew}};\n\nreturn msgout;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 520,
+        "wires": [
+            [
+                "e47f59b7968c1f18"
+            ]
+        ]
+    },
+    {
+        "id": "e47f59b7968c1f18",
+        "type": "subflow:a588552898ec9a9e",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "env": [
+            {
+                "name": "delay",
+                "value": "2000",
+                "type": "num"
+            }
+        ],
+        "x": 2390,
+        "y": 520,
+        "wires": [
+            [
+                "f0509ca1bc1f4e03"
+            ]
+        ]
+    },
+    {
+        "id": "141217609dbcf9ac",
+        "type": "subflow:a588552898ec9a9e",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "env": [
+            {
+                "name": "delay",
+                "value": "5000",
+                "type": "num"
+            }
+        ],
+        "x": 2390,
+        "y": 480,
+        "wires": [
+            [
+                "f0509ca1bc1f4e03"
+            ]
+        ]
+    },
+    {
+        "id": "703d00deb5101065",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "fjern felter",
+        "func": "\ndelete msg.command;\ndelete msg.rc;\ndelete msg.parts;\ndelete msg.qos;\ndelete msg.retain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "6a1644a6ab68d5f2"
+            ]
+        ]
+    },
+    {
+        "id": "8f4522bcb20d467e",
+        "type": "trigger",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "385b463bb1924a74"
+            ]
+        ]
+    },
+    {
+        "id": "c8cfc68d7b814dd6",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "clean empty",
+        "func": "function cleanStructure(data) {\n    if (Array.isArray(data)) {\n        return data\n            .map(cleanStructure)\n            .filter(item => item !== null && !(Array.isArray(item) && item.length === 0));\n    } else if (typeof data === \"object\" && data !== null) {\n        let cleaned = {};\n        for (let key in data) {\n            let value = cleanStructure(data[key]);\n            if (value !== null && !(Array.isArray(value) && value.length === 0)) {\n                cleaned[key] = value;\n            }\n        }\n        return cleaned;\n    } else {\n        return data;\n    }\n}\n\nmsg.payload = cleanStructure(msg.payload);\nif (!(Array.isArray(msg.payload))) {\n    let ts = msg.payload.timestamp || Math.floor(Date.now() / 1000);\n    let instanceid = msg.payload.instance || 'ABC';\n    let newsource = msg.payload.source || 'incident';\n    let newpayload = msg.payload.payload || msg.payload;\n\n    msg.payload = [{ 'timestamp': ts,\n        'instance': instanceid,\n        source: newsource, 'payload':newpayload}];\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "8f4522bcb20d467e",
+                "d0872df4d6f5a6c6"
+            ]
+        ]
+    },
+    {
+        "id": "06febe0a3f046fba",
+        "type": "mqtt in",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "Incidents",
+        "topic": "+/fromFSR/incidents/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "c8cfc68d7b814dd6"
+            ]
+        ]
+    },
+    {
+        "id": "ea5d8ba81e5b10b9",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "kun nye info",
+        "func": "let currentHash = msg.payload.hash;\nlet incidentid = String(msg.incidentpayload.id);\nlet newinfo = true;\n\nif (typeof incidentid !== \"undefined\" && typeof currentHash !== \"undefined\") {\n    // Gem tidligere værdier i flow context\n    let previousHash = context.get(String(incidentid));\n    if (typeof previousHash !== \"undefined\") {\n        if (currentHash == previousHash) {\n            newinfo = false;\n        } else {\n            msg.debug = \"hashvalue was same as previuos(drops)\"\n        }\n    } else {\n        msg.debug = \"unable to find previous hashvalue\"\n    }\n    context.set(incidentid,currentHash); \n} else {\n    msg.debug = \"unable to extract incidentid or hashvalue\"\n}\n\n// Sammenlign med tidligere værdi\nif (newinfo) {\n    return [msg, null]; // Ny værdi → output 1\n} else {\n    return [null, msg]; // Uændret → output 2\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [
+                "47917fcb429ad09f",
+                "39b279c4c18bb95f",
+                "a590bd15d414b84b",
+                "45df21ef43145d12"
+            ],
+            [
+                "e6a363c6cbee38fb"
+            ]
+        ],
+        "inputLabels": [
+            "json"
+        ],
+        "outputLabels": [
+            "ny info",
+            "gl. info"
+        ]
+    },
+    {
+        "id": "1ef8da0936d4f8c7",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "set mqtt params",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "msg.station & \"/toScreen/\" & $flowContext(\"instanceid\") & \"/info\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "qos",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"incidentid\":msg.incidentpayload.id,\"hash\":msg.payload.hash,\"message\":\"hash value already seen, msg dismissed\"}\t/*{\"listening\":payload,\"sending\":payload}*/",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 620,
+        "wires": [
+            [
+                "ab7cd7b236570abf"
+            ]
+        ]
+    },
+    {
+        "id": "ab7cd7b236570abf",
+        "type": "mqtt out",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "send info",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1880,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "79b8b90df4c2f091",
+        "type": "mqtt out",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "send info",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1880,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "85788e7d1ea53211",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "set mqtt params",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "msg.station & \"/toScreen/\" & $flowContext(\"instanceid\") & \"/info\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "qos",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"payload\":msg.payload,\"message\":\"unable to find incident start time (no message to telegram)\"}\t/*{\"listening\":payload,\"sending\":payload}*/",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 560,
+        "wires": [
+            [
+                "79b8b90df4c2f091"
+            ]
+        ]
+    },
+    {
+        "id": "f0509ca1bc1f4e03",
+        "type": "mqtt out",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "send to telegram family ",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 2670,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7b35aa57940e91d0",
+        "type": "function",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "set kortmelding",
+        "func": "const oldpayload = msg.payload;\nmsg.kort_melding = ''\nif (\"meldingdata\" in oldpayload) {\n    if (\"melding\" in oldpayload.meldingdata) {\n        msg.kort_melding += oldpayload.meldingdata.melding;\n    }\n}\nif (\"location\" in oldpayload) {\n    if (\"sted\" in oldpayload.location) {\n        msg.kort_melding += ' ' + oldpayload.location.sted;\n    }\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 480,
+        "wires": [
+            [
+                "7475b62d06e5551f"
+            ]
+        ]
+    },
+    {
+        "id": "7475b62d06e5551f",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "jsonata_exp",
+                "v": "$split(msg.topic,'/')[0] = 'brandebug'\t",
+                "vt": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1870,
+        "y": 480,
+        "wires": [
+            [],
+            [
+                "2100f75940ae94e4",
+                "1cc2e5c84511e0ed"
+            ]
+        ],
+        "outputLabels": [
+            "debug",
+            "resten"
+        ]
+    },
+    {
+        "id": "670d52f911222b98",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "jsonata_exp",
+                "v": "$split(msg.topic,'/')[0] = 'brandebug'\t",
+                "vt": "jsonata"
+            },
+            {
+                "t": "jsonata_exp",
+                "v": "$split(msg.topic,'/')[0] = 'struerbrand'",
+                "vt": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 2170,
+        "y": 180,
+        "wires": [
+            [
+                "7a29a51fe8e90268"
+            ],
+            [
+                "7a29a51fe8e90268"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "debug",
+            "struer",
+            "resten"
+        ]
+    },
+    {
+        "id": "e6a363c6cbee38fb",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "incidentSource",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "incidentList",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1230,
+        "y": 620,
+        "wires": [
+            [
+                "a590bd15d414b84b"
+            ],
+            [
+                "1ef8da0936d4f8c7"
+            ]
+        ]
+    },
+    {
+        "id": "17173196e050f0e0",
+        "type": "batch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "mode": "interval",
+        "count": 10,
+        "overlap": 0,
+        "interval": 10,
+        "allowEmptySequence": false,
+        "honourParts": false,
+        "topics": [],
+        "x": 1580,
+        "y": 180,
+        "wires": [
+            [
+                "d9c394ba34cb5b48"
+            ]
+        ]
+    },
+    {
+        "id": "a590bd15d414b84b",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"timestamp\":msg.timestamp,\"incidentid\":msg.payload.id, \"payload\":msg.payload}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 180,
+        "wires": [
+            [
+                "17173196e050f0e0"
+            ]
+        ]
+    },
+    {
+        "id": "d9c394ba34cb5b48",
+        "type": "join",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1770,
+        "y": 180,
+        "wires": [
+            [
+                "39bb60bb4482c6a4"
+            ]
+        ]
+    },
+    {
+        "id": "45df21ef43145d12",
+        "type": "trigger",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "6",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1410,
+        "y": 280,
+        "wires": [
+            [
+                "58abc0bbd0bbffb2"
+            ]
+        ]
+    },
+    {
+        "id": "15f88d08281bc796",
+        "type": "trigger",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "op1": "{\"cmd\":\"screenshot\"}",
+        "op2": "0",
+        "op1type": "json",
+        "op2type": "str",
+        "duration": "-58",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2010,
+        "y": 280,
+        "wires": [
+            [
+                "a588ae1f47ea902c"
+            ]
+        ]
+    },
+    {
+        "id": "58abc0bbd0bbffb2",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1570,
+        "y": 280,
+        "wires": [
+            [
+                "15f88d08281bc796"
+            ],
+            [
+                "f03bf7669c62ed2c",
+                "8323bdc41f6b8c3e"
+            ]
+        ]
+    },
+    {
+        "id": "f03bf7669c62ed2c",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 320,
+        "wires": [
+            [
+                "15f88d08281bc796"
+            ]
+        ]
+    },
+    {
+        "id": "a588ae1f47ea902c",
+        "type": "mqtt out",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "send to screen",
+        "topic": "struerbrand/toScreen/instance/5F8BV7va/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 2640,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8323bdc41f6b8c3e",
+        "type": "trigger",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "6",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1770,
+        "y": 380,
+        "wires": [
+            [
+                "f86248894d920326"
+            ]
+        ]
+    },
+    {
+        "id": "f86248894d920326",
+        "type": "switch",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1970,
+        "y": 380,
+        "wires": [
+            [
+                "5b2124f7a4f0924e"
+            ],
+            [
+                "cdb439aebb53bee2"
+            ]
+        ]
+    },
+    {
+        "id": "cdb439aebb53bee2",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2180,
+        "y": 420,
+        "wires": [
+            [
+                "5b2124f7a4f0924e"
+            ]
+        ]
+    },
+    {
+        "id": "5b2124f7a4f0924e",
+        "type": "trigger",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "op1": "{\"cmd\":\"screenshot\"}",
+        "op2": "0",
+        "op1type": "json",
+        "op2type": "str",
+        "duration": "-13",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2410,
+        "y": 380,
+        "wires": [
+            [
+                "a588ae1f47ea902c"
+            ]
+        ]
+    },
+    {
+        "id": "385b463bb1924a74",
+        "type": "sqlite",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "mydb": "5ff74d20e9e2fee5",
+        "sqlquery": "fixed",
+        "sql": "CREATE TABLE IF NOT EXISTS incidents (\n    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,\n    incidentid INTEGER UNIQUE,\n    active INTEGER DEFAULT 0 CHECK(active IN (0, 1)),\n    topic TEXT,\n    payload TEXT\n    );",
+        "name": "prepare db",
+        "x": 730,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "600dd16b0f7950f3",
+        "type": "sqlite",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "mydb": "5ff74d20e9e2fee5",
+        "sqlquery": "prepared",
+        "sql": "INSERT INTO incidents (incidentid, active, payload)\nVALUES ($incidentid, 1, $payload)\nON CONFLICT(incidentid) DO UPDATE SET\n    active = excluded.active,\n    payload = excluded.payload,\n    timestamp = CURRENT_TIMESTAMP;\n",
+        "name": "insert/update db",
+        "x": 1600,
+        "y": 120,
+        "wires": [
+            [
+                "8be48a7983726b58"
+            ]
+        ]
+    },
+    {
+        "id": "fdcb11ecbef74212",
+        "type": "sqlite",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "mydb": "5ff74d20e9e2fee5",
+        "sqlquery": "fixed",
+        "sql": "\nSELECT timestamp, incidentid, payload\nFROM incidents\nWHERE active = 1;\n\n",
+        "name": "select active",
+        "x": 2010,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0872df4d6f5a6c6",
+        "type": "change",
+        "z": "539911042c530633",
+        "g": "2f87d1c2cfc9a92b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "station",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "2d0ddf2699602447"
+            ]
+        ]
+    },
+    {
+        "id": "df9c07a7f9588735",
+        "type": "mqtt out",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "send to telegraminstance",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1050,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b895ab7fafe1f24e",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "set result dboperation",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "station & \"/toTelegram/instanceid/\" & instanceid",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "qos",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"dboperation\":$flowContext(workingname)}\t/*{\"listening\":payload,\"sending\":payload}*/",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "df9c07a7f9588735"
+            ]
+        ]
+    },
+    {
+        "id": "8564567cc0c90af9",
+        "type": "mqtt in",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "",
+        "topic": "+/fromTG/instance/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "cf3a634e9c3e78b8"
+            ]
+        ]
+    },
+    {
+        "id": "d7be2af1db449eae",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "seperate topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "station",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "instanceid",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[3]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "workingname",
+                "pt": "msg",
+                "to": "$join([\"mongoworking\",station])\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "efe196c4a13e4e46",
+                "35934c04f2e4bc7f"
+            ]
+        ]
+    },
+    {
+        "id": "cf3a634e9c3e78b8",
+        "type": "delay",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "d7be2af1db449eae"
+            ]
+        ]
+    },
+    {
+        "id": "efe196c4a13e4e46",
+        "type": "delay",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "b895ab7fafe1f24e"
+            ]
+        ]
+    },
+    {
+        "id": "08ba1b1f8501d913",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "set db working",
+        "func": "const stationname = msg.station;\nflow.set(msg.workingname,true);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35934c04f2e4bc7f",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "set search param",
+        "func": "const stationname = msg.station;\nflow.set(msg.workingname,false); //initial\n\nmsg.query = `SELECT count() AS total FROM telegramUsers WHERE station = '${stationname}' GROUP ALL`\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [
+                "e4c268c6f93aad33"
+            ]
+        ]
+    },
+    {
+        "id": "e4c268c6f93aad33",
+        "type": "subflow:960a11131036b0ef",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "",
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "5fe0b6fb69ce872e"
+            ]
+        ]
+    },
+    {
+        "id": "5fe0b6fb69ce872e",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "5f57b35c5ed0f6bc",
+        "name": "result ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "jsonata_exp",
+                "v": "(msg.payload[1].status = \"OK\" and msg.payload[1].result[0].total > 0)",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 120,
+        "wires": [
+            [
+                "08ba1b1f8501d913"
+            ]
+        ]
+    },
+    {
+        "id": "7f2a7d4d6b201c80",
+        "type": "mqtt in",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "topic": "+/fromTG/getUsers",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "1c68dab86e1e321d"
+            ]
+        ],
+        "info": "{\r\n    \"payload\":\r\n    {\r\n        \"returntopic\": \"xx\",\r\n        \"stationname\" \"xx\",\r\n        \"current_hash\":\"xx\", //optional\r\n    }\r\n}"
+    },
+    {
+        "id": "d62b5cbc8e31e2c5",
+        "type": "inject",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"returntopic\":\"brandebug/franktest\",\"stationname\":\"struerbrand\",\"current_hash\":\"12345623618444\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "0758f2da1fca0998"
+            ]
+        ]
+    },
+    {
+        "id": "0758f2da1fca0998",
+        "type": "mqtt out",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "topic": "struerbrand/fromTG/getUsers",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 400,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1c68dab86e1e321d",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "property": "payload.returntopic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "3e8e5ff2e094c58f"
+            ]
+        ]
+    },
+    {
+        "id": "3e8e5ff2e094c58f",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "returntopic",
+                "pt": "msg",
+                "to": "payload.returntopic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "users_hash",
+                "pt": "msg",
+                "to": "payload.current_hash",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 480,
+        "wires": [
+            [
+                "c2a49f57f3930994"
+            ]
+        ]
+    },
+    {
+        "id": "5a596f4f74710fd5",
+        "type": "mqtt out",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c2a49f57f3930994",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "set search param",
+        "func": "msg.newincidents = msg.payload;\nconst stationname = msg.payload.stationname;\n\nif (msg.payload?.stationname) { // eksistere\n    msg.query = `SELECT * FROM telegramUsers WHERE station = '${msg.payload.stationname}' ORDER BY timestamp DESC`;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "7e73fbdaeb5fa4df"
+            ]
+        ]
+    },
+    {
+        "id": "7e73fbdaeb5fa4df",
+        "type": "subflow:960a11131036b0ef",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "8ad7e6e9e4a49708"
+            ]
+        ]
+    },
+    {
+        "id": "c7cd1e15ee39be1b",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "pick newest/best/current version",
+        "func": "const oldpayload = msg.output;\nlet newpayload = [];\n// loop fra nyeste til ældste\nlet newestdata = null;\n\nfor (let i = 0; i < oldpayload.length; i++) {\n    let item = oldpayload[i];\n    if(newestdata==null) {\n      newestdata = item;\n    }\n    if (newestdata[\"parent\"] == \"\" && item[\"parent\"] != \"\") {\n      newestdata = item;\n      break;\n    }\n\n}\n\nmsg.workingdata = newestdata;\n\nif (newestdata != null) {\n  //prepare for mqtt\n  msg.topic = msg.returntopic;\n  msg.payload = { \"data\": newestdata.data, \"versionnode\": { \"timestamp\": newestdata.timestamp, \"stationname\": newestdata.station, \"hash\": newestdata.hashvalue, \"branch\": newestdata.branchvalue,\"parent\": newestdata.parent }};\n  if (newestdata[\"parent\"] !== undefined) {\n    msg.payload.versionnode.parent = newestdata[\"parent\"];\n  }\n  return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 480,
+        "wires": [
+            [
+                "5a596f4f74710fd5"
+            ]
+        ]
+    },
+    {
+        "id": "8ad7e6e9e4a49708",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "9535783a43a97366",
+        "name": "",
+        "property": "payload[1].status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ERR",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 480,
+        "wires": [
+            [],
+            [
+                "c7cd1e15ee39be1b"
+            ]
+        ]
+    },
+    {
+        "id": "39f1832d8132fd03",
+        "type": "mqtt in",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "topic": "+/fromTG/instance/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0dc582a0c56ff50e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "54f6f4f17eec93c5"
+            ]
+        ]
+    },
+    {
+        "id": "54f6f4f17eec93c5",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "property": "payload.message",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "telegram user update",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "ac9604840a7f13ad"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ac9604840a7f13ad",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "returntopic",
+                "pt": "msg",
+                "to": "payload.returntopic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.files",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "station",
+                "pt": "msg",
+                "to": "$split(msg.topic, '/')[0]\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "daa643e0ed16cca5"
+            ]
+        ]
+    },
+    {
+        "id": "daa643e0ed16cca5",
+        "type": "split",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 370,
+        "y": 740,
+        "wires": [
+            [
+                "9bf1c575858c0155"
+            ]
+        ]
+    },
+    {
+        "id": "9bf1c575858c0155",
+        "type": "json",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 390,
+        "y": 780,
+        "wires": [
+            [
+                "03bfecf68cdbfb4b"
+            ]
+        ]
+    },
+    {
+        "id": "03bfecf68cdbfb4b",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "versionnode",
+                "pt": "msg",
+                "to": "msg.payload.versionnode",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{  \"timestamp\": msg.payload.versionnode.timestamp,\t    \"hashvalue\": msg.payload.versionnode.hash,\t    \"branchvalue\": msg.payload.versionnode.branch, \t    \"station\":msg.payload.versionnode.stationname,\t    \"parent\":msg.payload.versionnode.parent,\t    \"data\":msg.payload.data\t    }]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "5731c3fbd974f730"
+            ]
+        ]
+    },
+    {
+        "id": "5731c3fbd974f730",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "clean empty",
+        "func": "function cleanStructure(data) {\n    if (Array.isArray(data)) {\n        return data\n            .map(cleanStructure)\n            .filter(item => item !== null && !(Array.isArray(item) && item.length === 0));\n    } else if (typeof data === \"object\" && data !== null) {\n        let cleaned = {};\n        for (let key in data) {\n            let value = cleanStructure(data[key]);\n            if (value !== null && !(Array.isArray(value) && value.length === 0)) {\n                cleaned[key] = value;\n            }\n        }\n        return cleaned;\n    } else {\n        return data;\n    }\n}\n\nmsg.payload = cleanStructure(msg.payload);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 760,
+        "wires": [
+            [
+                "4d6c4697f629d687",
+                "3a18765e1cfa71ef",
+                "c67c01c0da4d0dd7"
+            ]
+        ]
+    },
+    {
+        "id": "4d6c4697f629d687",
+        "type": "delay",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 760,
+        "wires": [
+            [
+                "fb046207264fd73f"
+            ]
+        ]
+    },
+    {
+        "id": "1f921ad7257f9ece",
+        "type": "mqtt out",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dc582a0c56ff50e",
+        "x": 1610,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "fb046207264fd73f",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "set search param",
+        "func": "\nif (msg.versionnode?.hash) { // eksistere\n    msg.query = `SELECT * FROM telegramUsers WHERE hashvalue = '${msg.versionnode.hash}' ORDER BY timestamp DESC`;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 760,
+        "wires": [
+            [
+                "332cf2a4a4fb0122"
+            ]
+        ]
+    },
+    {
+        "id": "9287faf0393b0577",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "property": "output",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1310,
+        "y": 760,
+        "wires": [
+            [
+                "30eb45baba54c223"
+            ]
+        ]
+    },
+    {
+        "id": "332cf2a4a4fb0122",
+        "type": "subflow:960a11131036b0ef",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "x": 1180,
+        "y": 760,
+        "wires": [
+            [
+                "9287faf0393b0577"
+            ]
+        ]
+    },
+    {
+        "id": "30eb45baba54c223",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "returntopic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"backup_receipt\":msg.output[0].hashvalue}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 760,
+        "wires": [
+            [
+                "1f921ad7257f9ece"
+            ]
+        ]
+    },
+    {
+        "id": "3a18765e1cfa71ef",
+        "type": "function",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "set insert param",
+        "func": "const payloadin = msg.payload;\n\nfunction createStatement(payloaddata) {\n    const kraevedeNoegler = ['timestamp', 'hashvalue', 'branchvalue', 'station', 'data'];\n    // 2. Tjek om de alle findes i dit objekt (f.eks. oldrow)\n    const alleNoeglerFindes = kraevedeNoegler.every(noegle => noegle in payloaddata);\n\n    if (alleNoeglerFindes) {\n        const parentValue = payloaddata.parent ? payloaddata.parent : \"\";\n        return `CREATE telegramUsers SET\n            timestamp = ${payloaddata.timestamp},\n            hashvalue = '${payloaddata.hashvalue}' ,\n            branchvalue = '${payloaddata.branchvalue}',\n            station = '${payloaddata.station}',\n            data = ${JSON.stringify(payloaddata.data)},\n            parent = '${parentValue}';`;\n    }\n}\n\n\nif (Array.isArray(payloadin)) {\n    let toReturn = [];\n    for (let key in payloadin) {\n        let value = createStatement(payloadin[key]);\n        toReturn.push(value);\n    }\n    return {\"query\":toReturn};\n} else if (typeof payloadin === \"object\" && payloadin !== null) {\n        let value = createStatement(payloadin);\n        return {\"query\":value};\n}\n\n\n\n\n\n\nconst oldrow = msg.payload;\nconst parentValue = oldrow.parent ? oldrow.parent : \"\";\n\nmsg.payload = `\n  USE NS app DB main;\n  CREATE telegramUsers SET\n            timestamp = ${oldrow.timestamp},\n            hashvalue = '${oldrow.hashvalue}' ,\n            branchvalue = '${oldrow.branchvalue}',\n            station = '${oldrow.station}',\n            data = ${JSON.stringify(oldrow.data)},\n            parent = '${parentValue}';`\n;\n\nif (msg.versionnode?.hash) { // eksistere\n    msg.query = `SELECT * FROM telegramUsers WHERE hashvalue = '${msg.versionnode.hash}' ORDER BY timestamp DESC`;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 680,
+        "wires": [
+            [
+                "508ff2fc5c38d922",
+                "3c4f3a6cdd96427e"
+            ]
+        ]
+    },
+    {
+        "id": "508ff2fc5c38d922",
+        "type": "subflow:960a11131036b0ef",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "x": 980,
+        "y": 680,
+        "wires": [
+            [
+                "6eaddb84251337e6"
+            ]
+        ]
+    },
+    {
+        "id": "6eaddb84251337e6",
+        "type": "switch",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "property": "payload[1].status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ERR",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 680,
+        "wires": [
+            [],
+            [
+                "bd943901afd2a57b"
+            ]
+        ]
+    },
+    {
+        "id": "3c4f3a6cdd96427e",
+        "type": "file",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "filename": "newTGuserobj.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd943901afd2a57b",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "query",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c67c01c0da4d0dd7",
+        "type": "change",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "\"tguser/upload/\" & msg.stationname & \"_\" & $fromMillis($millis())",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 820,
+        "wires": [
+            [
+                "7679bfef409dac2c"
+            ]
+        ]
+    },
+    {
+        "id": "794a55ba8ec9211a",
+        "type": "encrypt",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "krypter",
+        "algorithm": "AES",
+        "key": "8Yf?fkAP3s",
+        "x": 1130,
+        "y": 820,
+        "wires": [
+            [
+                "c0e1ea1c55c53227"
+            ]
+        ]
+    },
+    {
+        "id": "c0e1ea1c55c53227",
+        "type": "amazon s3 out",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "aws": "",
+        "bucket": "fsr-struer",
+        "filename": "",
+        "localFilename": "",
+        "region": "eu-north-1",
+        "name": "",
+        "x": 1290,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "7679bfef409dac2c",
+        "type": "json",
+        "z": "2fd8f2870b92cd2a",
+        "g": "0306968a06a8d77c",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1010,
+        "y": 820,
+        "wires": [
+            [
+                "794a55ba8ec9211a"
+            ]
+        ]
+    }
+]

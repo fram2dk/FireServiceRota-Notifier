@@ -1,0 +1,11 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-crypto-js": "~0.1.1",
+        "node-red-node-aws": "~0.4.0",
+        "node-red-node-sqlite": "~2.0.1"
+    }
+}

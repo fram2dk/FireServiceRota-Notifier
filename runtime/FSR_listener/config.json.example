@@ -1,0 +1,34 @@
+{
+   "priority":11,
+   "fireservicerota":{
+      "username":"fsruser@falck.com",
+      "password":"userpassword",
+      "exclude_user":[
+         37367,
+         37474
+      ],
+      "include_groups":[
+         901,
+         902,
+         903
+      ]
+   },
+   "mqtt":{
+	"username":"fsrlistener",
+        "password":"G4i4tz4T",
+        "stationname":"debugbrand"
+   },
+   "app":{
+      "vehicles":{
+         "1234":"A-sprøjte",
+         "2345":"Tankvogn1",
+         "2456":"Tankvogn2",
+         "2567":"Stigevogn",
+         "1256":"Tender",
+         "1209":"Redningsvogn",
+         "ISL":""
+      }
+   }
+}
+
+

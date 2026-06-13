@@ -1,0 +1,9 @@
+requests
+paho-mqtt
+influxdb_client
+pytz
+oauthlib
+websocket-client
+pyaes
+pycryptodome
+pyTelegramBotAPI==4.32.0

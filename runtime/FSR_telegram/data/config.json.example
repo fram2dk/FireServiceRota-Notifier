@@ -1,0 +1,13 @@
+{
+   "priority":19,
+   "telegram":{
+   },
+   "mqtt":{
+	"username":"FSRtelegram",
+        "password":"CG4mKGpFM5",
+        "stationname":"debugbrand",
+        "basetopic":"debugbrand"
+   },
+   "app":{
+   }
+}

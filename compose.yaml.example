@@ -1,0 +1,64 @@
+services:
+  FSR_nodered:
+    container_name: FSR_nodered_test
+    image: "nodered/node-red:latest"
+    user: "1000:1000" 
+    environment:
+      - TZ=Europe/Copenhagen
+      - CREDENTIALSECRET=5M3CDPAyfy
+    volumes:
+      - ./runtime/nodered/data:/data
+    networks:
+      - fsr-network
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+
+  mosquitto:
+    container_name: FSR_mosquitto_test
+    image: eclipse-mosquitto:openssl
+    volumes:
+      - ./runtime/mosquitto/:/mosquitto/config/
+    networks:
+      - fsr-network
+    restart: unless-stopped
+
+  fsrlistenerstruer:
+    container_name: FSR_listener_test
+    build: ./docker/FSR_listener/
+    volumes:
+      - struerbrand_listener:/app/storage
+      - ./runtime/FSR_listener/:/data/:ro
+    networks:
+      - fsr-network
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    environment:
+      - INSTANCENAME=ovh_fsrlistener1
+
+  brandtelegram:
+    container_name: FSRtelegram_test
+    build: ./docker/FSR_telegram/
+    environment:
+      - TG_TOKEN=610245812326:AAFlUtwUJhjdadgfsk2EYGl_jE8EBh_Tgc
+    volumes:
+      - ./runtime/FSR_telegram/data:/data
+      - ./runtime/FSR_telegram/tmp:/tmp
+    networks:
+      - fsr-network
+    restart: unless-stopped
+
+networks:
+  fsr-network:
+    name: fireservicerota
+volumes:
+  struerbrand_listener:
