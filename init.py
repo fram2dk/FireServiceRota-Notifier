@@ -41,10 +41,20 @@ fi
 #mosquitto
 PASSWD_FILE="./runtime/mosquitto/passwd"
 CONFIG_FILE="./runtime/mosquitto/mosquitto.conf"
+CERT_FOLDER="./runtime/mosquitto/certs/"
 SERVERCRT_FILE="./runtime/mosquitto/certs/ovhserver.crt"
 SERVERKEY_FILE="./runtime/mosquitto/certs/ovhserver.key"
 PSK_FILE="./runtime/mosquitto/certs/psk_file.txt"
 ROOTCA_FILE="./runtime/mosquitto/certs/rootCA.crt"
+# Tjek om cert mappen IKKE eksisterer
+if [ ! -f "$CERT_FOLDER" ]; then
+    echo "Fandt ikke $CERT_FOLDER. Kopierer eksempelfil..."
+    # Kopier eksempelfilen
+    mkdir -p "$CERT_FOLDER"
+    echo "✓ mappen blev kopieret."
+else
+    echo "✓ $CERT_FOLDER findes allerede. Gør intet."
+fi
 # Tjek om passwd-filen IKKE eksisterer
 if [ ! -f "$PASSWD_FILE" ]; then
     echo "Fandt ikke $PASSWD_FILE. Kopierer eksempelfil..."
